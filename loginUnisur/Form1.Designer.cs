@@ -141,7 +141,7 @@
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Login";
+            this.Text = "Login Unisur";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
