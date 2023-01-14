@@ -45,6 +45,7 @@ namespace loginUnisur
             
             if (intentos == 0)
             {
+                lblAviso.Text = "Ya no tienes más intentos";
                 btnEntrar.Enabled = false;
                 txtClave.Enabled = false;
                 txtUsuario.Enabled = false;
