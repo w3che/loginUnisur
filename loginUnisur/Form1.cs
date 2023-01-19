@@ -13,6 +13,8 @@ namespace loginUnisur
     public partial class Form1 : Form
     {
         static int intentos = 3;
+        static string usuario = "Pancho";
+        static string clave = "Barco100";
         public Form1()
         {
             InitializeComponent();
@@ -20,42 +22,38 @@ namespace loginUnisur
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            pictureBox1.Image = new Bitmap(@"..\..\lock.png");
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             //User = "Pancho"
             //Contraseña = "Barco100"
-            string usuario = txtUsuario.Text;
-            string password = txtClave.Text;
-            if (usuario == "Pancho" && password == "Barco100")
+            string user = tbuser.Text;
+            string contrasena = tbcontrasena.Text;
+            if (user == usuario && contrasena == clave)
             {
                 intentos = 3;
-                pictureBox1.Image = new Bitmap(@"C:\Users\JC\source\repos\loginUnisur\loginUnisur\unlocked.png");
-                MessageBox.Show("Bienvenido");
+                pictureBox1.Image = new Bitmap(@"..\..\unlocked.png");
+                MessageBox.Show("Bienvenido", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                aviso.Text = "";
             }
             else if (intentos <= 3 && intentos > 0)
             {
                 //Avisar cuantos intentos le quedan
                 intentos--;
-                lblAviso.Text = "Solo tienes " + Convert.ToString(intentos) + " intentos más";
-                MessageBox.Show("Usuario o contraseña incorrecta");
+                aviso.Text = "Solo tienes " + Convert.ToString(intentos) + " intentos más";
+                MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbuser.Focus();
             }
             
-            if (intentos == 0)
+            if (intentos <= 0)
             {
-                lblAviso.Text = "Ya no tienes más intentos";
+                aviso.Text = "Ya no tienes más intentos";
                 btnEntrar.Enabled = false;
-                txtClave.Enabled = false;
-                txtUsuario.Enabled = false;
+                tbcontrasena.Enabled = false;
+                tbuser.Enabled = false;
             }
-        }
-
-        private void Form1_Activated(object sender, EventArgs e)
-        {
-            txtUsuario.Focus();
-            pictureBox1.Image = new Bitmap(@"C:\Users\JC\source\repos\loginUnisur\loginUnisur\lock.png");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

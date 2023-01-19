@@ -33,9 +33,9 @@
             this.lblClave = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lblAviso = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
+            this.aviso = new System.Windows.Forms.Label();
+            this.tbuser = new System.Windows.Forms.TextBox();
+            this.tbcontrasena = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(242, 197);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(106, 29);
-            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.TabIndex = 7;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -87,39 +87,39 @@
             this.btnSalir.Location = new System.Drawing.Point(378, 197);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(91, 29);
-            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // lblAviso
+            // aviso
             // 
-            this.lblAviso.AutoSize = true;
-            this.lblAviso.Location = new System.Drawing.Point(31, 213);
-            this.lblAviso.Name = "lblAviso";
-            this.lblAviso.Size = new System.Drawing.Size(10, 13);
-            this.lblAviso.TabIndex = 6;
-            this.lblAviso.Text = ".";
+            this.aviso.AutoSize = true;
+            this.aviso.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aviso.Location = new System.Drawing.Point(31, 213);
+            this.aviso.Name = "aviso";
+            this.aviso.Size = new System.Drawing.Size(36, 17);
+            this.aviso.TabIndex = 4;
+            this.aviso.Text = "       ";
             // 
-            // txtUsuario
+            // tbuser
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(346, 75);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(149, 20);
-            this.txtUsuario.TabIndex = 7;
+            this.tbuser.Location = new System.Drawing.Point(346, 75);
+            this.tbuser.Name = "tbuser";
+            this.tbuser.Size = new System.Drawing.Size(149, 20);
+            this.tbuser.TabIndex = 5;
             // 
-            // txtClave
+            // tbcontrasena
             // 
-            this.txtClave.Location = new System.Drawing.Point(346, 139);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(149, 20);
-            this.txtClave.TabIndex = 8;
-            this.txtClave.UseSystemPasswordChar = true;
+            this.tbcontrasena.Location = new System.Drawing.Point(346, 139);
+            this.tbcontrasena.Name = "tbcontrasena";
+            this.tbcontrasena.Size = new System.Drawing.Size(149, 20);
+            this.tbcontrasena.TabIndex = 6;
+            this.tbcontrasena.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::loginUnisur.Properties.Resources._lock;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,9 +131,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 268);
-            this.Controls.Add(this.txtClave);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lblAviso);
+            this.Controls.Add(this.tbcontrasena);
+            this.Controls.Add(this.tbuser);
+            this.Controls.Add(this.aviso);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.lblClave);
@@ -142,7 +142,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Login Unisur";
-            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -158,9 +157,9 @@
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Label lblAviso;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Label aviso;
+        private System.Windows.Forms.TextBox tbuser;
+        private System.Windows.Forms.TextBox tbcontrasena;
     }
 }
 
